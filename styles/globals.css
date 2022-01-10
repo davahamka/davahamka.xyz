@@ -1,16 +1,82 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .text-brand-gradient {
+    @apply text-transparent bg-gradient-to-br bg-clip-text from-[#FF00AF] to-[#FF55C9];
+  }
+
+  [data-fade] {
+    @apply duration-[300ms] opacity-0 transition ease-out translate-y-10 motion-reduce:opacity-100 motion-reduce:translate-y-0;
+  }
+
+  .fade-in-start [data-fade] {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .fade-in-start [data-fade='1'] {
+    transition-delay: 100ms;
+  }
+  .fade-in-start [data-fade='2'] {
+    transition-delay: 200ms;
+  }
+  .fade-in-start [data-fade='3'] {
+    transition-delay: 300ms;
+  }
+  .fade-in-start [data-fade='4'] {
+    transition-delay: 400ms;
+  }
+  .fade-in-start [data-fade='5'] {
+    transition-delay: 500ms;
+  }
+  .fade-in-start [data-fade='6'] {
+    transition-delay: 600ms;
+  }
+  .fade-in-start [data-fade='7'] {
+    transition-delay: 700ms;
+  }
+  .fade-in-start [data-fade='8'] {
+    transition-delay: 800ms;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  src: url(../public/fonts/PlusJakartaSans-ExtraBold.woff2) format("woff2");
+
 }
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  src: url(../public/fonts/PlusJakartaSans-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  src: url(../public/fonts/PlusJakartaSans-SemiBold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url(../public/fonts/PlusJakartaSans-Regular.woff2) format("woff2");
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
 
 * {
   box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
+
+
