@@ -1,7 +1,5 @@
 const Journey = () => {
-    return (
-        <div></div>
-    )
-}
+  return <div></div>;
+};
 
-export default Journey
+export default Journey;

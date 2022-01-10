@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
   .text-brand-gradient {
     @apply text-transparent bg-gradient-to-br bg-clip-text from-[#FF00AF] to-[#FF55C9];
@@ -42,41 +41,35 @@
   }
 }
 
-
 @font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: 'Plus Jakarta Sans';
   font-weight: 800;
-  src: url(../public/fonts/PlusJakartaSans-ExtraBold.woff2) format("woff2");
-
+  src: url(../public/fonts/PlusJakartaSans-ExtraBold.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: 'Plus Jakarta Sans';
   font-weight: 700;
-  src: url(../public/fonts/PlusJakartaSans-Bold.woff2) format("woff2");
+  src: url(../public/fonts/PlusJakartaSans-Bold.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: 'Plus Jakarta Sans';
   font-weight: 600;
-  src: url(../public/fonts/PlusJakartaSans-SemiBold.woff2) format("woff2");
+  src: url(../public/fonts/PlusJakartaSans-SemiBold.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url(../public/fonts/PlusJakartaSans-Regular.woff2) format("woff2");
-
+  font-family: 'Plus Jakarta Sans';
+  src: url(../public/fonts/PlusJakartaSans-Regular.woff2) format('woff2');
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-
 * {
   box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  font-family: 'Plus Jakarta Sans', 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-
