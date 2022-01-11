@@ -20,7 +20,10 @@ const Footer = () => {
             className=''
             interactive
           >
-            <div className='duration-100 text-4xl hover:text-[#FF55C9] cursor-ne-resize'>
+            <div
+              onClick={() => window.open(item.link, '_blank')}
+              className='duration-100 text-4xl hover:text-[#FF55C9] cursor-ne-resize'
+            >
               {item.logo}
             </div>
           </Tooltip>
@@ -31,10 +34,26 @@ const Footer = () => {
 };
 
 const linkSocial = [
-  { name: 'github', link: '', logo: <AiFillGithub /> },
-  { name: 'email', link: '', logo: <AiOutlineMail /> },
-  { name: 'linkedin', link: '', logo: <AiFillLinkedin /> },
-  { name: 'twitter', link: '', logo: <AiOutlineTwitter /> },
+  {
+    name: 'github',
+    link: 'https://github.com/davahamka',
+    logo: <AiFillGithub />,
+  },
+  {
+    name: 'email',
+    link: 'https://github.com/davahamka',
+    logo: <AiOutlineMail />,
+  },
+  {
+    name: 'linkedin',
+    link: 'https://github.com/davahamka',
+    logo: <AiFillLinkedin />,
+  },
+  {
+    name: 'twitter',
+    link: 'https://twitter.com/dava770',
+    logo: <AiOutlineTwitter />,
+  },
 ];
 
 export default Footer;

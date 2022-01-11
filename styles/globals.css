@@ -73,3 +73,27 @@ html {
   font-family: 'Plus Jakarta Sans', 'Lucida Sans', 'Lucida Sans Regular',
     'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #ff00af;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0) scaleY(-1);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff00af;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1) scaleY(-1);
+  transform-origin: bottom left;
+}

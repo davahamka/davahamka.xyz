@@ -1,7 +1,11 @@
-import { techStackData } from 'contents/tech-stack';
+import { TechStacksObj } from '~/types/graphcms';
 import TechStackCard from './tech-stack-card';
 
-const TechStack = () => {
+type TechStackProps = {
+  dataTechStacks: TechStacksObj[];
+};
+
+const TechStack = ({ dataTechStacks }: TechStackProps) => {
   return (
     <section className='mt-24'>
       <div className='px-8 xl:px-0 pt-4 xl:w-[68rem] mx-auto'>
@@ -12,9 +16,9 @@ const TechStack = () => {
           </p>
         </div>
         <div className='mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6'>
-          {techStackData.map((item) => (
-            <div key={item.label}>
-              <TechStackCard label={item.label} img={item.img} />
+          {dataTechStacks.map((item) => (
+            <div key={item.name}>
+              <TechStackCard label={item.name} img={item.img?.url} />
             </div>
           ))}
         </div>

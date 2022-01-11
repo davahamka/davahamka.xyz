@@ -63,16 +63,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* - Hello! I'm Dava.
-                    <br />
-                    - I started learning web development in May 2020, which is the start of the pandemic. I have nothing much to do so I decided to learn web development from a udemy course, then started watching a bunch of
-                    youtube videos
-                    to explore more about web development especially frontend development.
-
-                    There are a lot of things and technologies to learn in frontend development and I am motivated to learn as much as possible. I enjoy learning something new and getting feedback to make myself better and improve.
-
-                    In this website I will be writing some blogs and showcase my projects. I believe that writing what I have learned is the best way to remember things, and I can share my knowledge along the way. So do contact me and I will be very happy to help! */}
       </div>
     </section>
   );

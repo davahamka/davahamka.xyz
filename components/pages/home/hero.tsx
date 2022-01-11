@@ -8,8 +8,6 @@ const Hero = () => {
   const isLoaded = useLoaded();
   const size = useWindowSize();
 
-  console.log(size);
-
   return (
     <section className={clsx(isLoaded && 'fade-in-start')}>
       <div className='h-[100vh] pt-[40px] xl:w-[68rem] mx-auto'>
@@ -22,7 +20,9 @@ const Hero = () => {
               <HeroBlurDark />
             </div>
             <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
-              <div className='bg-[#FECACA] dark:bg-[#050505] w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] rounded-full'></div>
+              <div className='text-[100px] bg-[#FECACA] dark:bg-[#050505] w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] rounded-full'>
+                <p className='flex justify-center items-center h-full '>🍣</p>
+              </div>
             </div>
             <div className='absolute top-[64%] left-[62%]'>
               <div className='bg-[#FF00AF] dark:bg-[#590046] w-[52px] h-[52px] rounded-full'></div>
