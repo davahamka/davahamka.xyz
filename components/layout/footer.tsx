@@ -41,7 +41,7 @@ const linkSocial = [
   },
   {
     name: 'email',
-    link: 'https://github.com/davahamka',
+    link: 'mailto:davahamka512ß@gmail.com?subject = Feedback&body = Message',
     logo: <AiOutlineMail />,
   },
   {

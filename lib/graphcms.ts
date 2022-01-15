@@ -1,4 +1,4 @@
-import { queryTechStacks } from "contents/graphcms/tech-stacks"
+import { queryTechStacks } from "~/contents/graphcms/tech-stacks"
 import { TechStacksObj, VariablesPrevFetch } from "~/types/graphcms"
 
 export async function fetchGraphCMS(query: string, { variables, preview }: VariablesPrevFetch = {}) {

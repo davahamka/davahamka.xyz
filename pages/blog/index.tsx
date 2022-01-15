@@ -3,6 +3,7 @@ import { getAllPost } from 'lib/mdx';
 import { sortByDate } from 'lib/mdx-client';
 import { InferGetStaticPropsType } from 'next';
 import { useState } from 'react';
+
 import Input from '~/components/form/input';
 import ListBlog from '~/components/pages/blog/list-blog';
 import Seo from '~/components/seo';
@@ -38,7 +39,7 @@ const Index = ({
 
   return (
     <>
-      <Seo />
+      <Seo title='Blog' />
       <section className={clsx(loaded && 'fade-in-start')}>
         <div className='min-h-[100vh] pt-[80px] xl:w-[68rem] mx-auto'>
           <div className='mt-16 px-8 xl:px-0 '>

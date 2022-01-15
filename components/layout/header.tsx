@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
+
 import DarkToggle from '../svg/dark-toggle';
 import LightToggle from '../svg/light-toggle';
 import { changeThemeColor } from '~/utils/change-theme-color';
@@ -34,9 +35,18 @@ const Header = () => {
           </ul>
 
           <div>
-            <button onClick={() => changeThemeColor({ theme, setTheme })}>
-              {theme === 'light' ? <DarkToggle /> : <LightToggle />}
-            </button>
+            <div
+              className='cursor-pointer'
+              onClick={() => changeThemeColor({ theme, setTheme })}
+            >
+              {theme === 'light' ? (
+                <DarkToggle />
+              ) : theme === 'dark' ? (
+                <LightToggle />
+              ) : (
+                'toggle'
+              )}
+            </div>
           </div>
         </nav>
       </div>

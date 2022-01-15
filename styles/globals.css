@@ -66,12 +66,12 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', 'Lucida Sans', 'Lucida Sans Regular',
-    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .hover-underline-animation {
@@ -96,4 +96,341 @@ html {
 .hover-underline-animation:hover:after {
   transform: scaleX(1) scaleY(-1);
   transform-origin: bottom left;
+}
+
+/**
+ * atom-dark theme for `prism.js`
+ * Based on Atom's `atom-dark` theme: https://github.com/atom/atom-dark-syntax
+ * @author Joe Gibson (@gibsjose)
+ */
+
+.mdx :where(h1, h2, h3, h4) {
+  scroll-margin-top: 82px;
+  position: relative;
+  display: block;
+  margin-right: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.mdx {
+  @apply dark:text-[#acacac];
+}
+
+.mdx blockquote {
+  border-style: solid;
+  border-width: 0 0 0 0.25rem;
+  border-image: linear-gradient(to top, #00ff94, #00e0f3, #00c4fd) 1;
+}
+
+.mdx code:not(:where([data-code-type='code-block'])) {
+  @apply py-1 rounded-md;
+}
+
+pre[class*='language-'] {
+  @apply border-2 dark:border-[#383838];
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  padding: 0px;
+  border-radius: 8px;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  color: #c3cee3;
+  font-family: Roboto Mono, monospace;
+  font-size: 1em;
+  line-height: 1.5em;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+code[class*='language-']::-moz-selection,
+pre[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection,
+pre[class*='language-'] ::-moz-selection {
+  background: #363636;
+}
+
+code[class*='language-']::selection,
+pre[class*='language-']::selection,
+code[class*='language-'] ::selection,
+pre[class*='language-'] ::selection {
+  background: #363636;
+}
+
+:not(pre) > code[class*='language-'] {
+  white-space: normal;
+  border-radius: 0.2em;
+}
+
+pre[class*='language-'] {
+  overflow: auto;
+  position: relative;
+  margin: 0.5em 0;
+  padding: 1.25em 1em;
+}
+
+.language-css > code,
+.language-sass > code,
+.language-scss > code {
+  color: #fd9170;
+}
+
+[class*='language-'] .namespace {
+  opacity: 0.7;
+}
+
+.token.atrule {
+  color: #c792ea;
+}
+
+.token.attr-name {
+  color: #ffcb6b;
+}
+
+.token.attr-value {
+  color: #c3e88d;
+}
+
+.token.attribute {
+  color: #c3e88d;
+}
+
+.token.boolean {
+  color: #c792ea;
+}
+
+.token.builtin {
+  color: #ffcb6b;
+}
+
+.token.cdata {
+  color: #80cbc4;
+}
+
+.token.char {
+  color: #80cbc4;
+}
+
+.token.class {
+  color: #ffcb6b;
+}
+
+.token.class-name {
+  color: #f2ff00;
+}
+
+.token.color {
+  color: #f2ff00;
+}
+
+.token.comment {
+  color: #546e7a;
+}
+
+.token.constant {
+  color: #c792ea;
+}
+
+.token.deleted {
+  color: #f07178;
+}
+
+.token.doctype {
+  color: #546e7a;
+}
+
+.token.entity {
+  color: #f07178;
+}
+
+.token.function {
+  color: #c792ea;
+}
+
+.token.hexcode {
+  color: #f2ff00;
+}
+
+.token.id {
+  color: #c792ea;
+  font-weight: bold;
+}
+
+.token.important {
+  color: #c792ea;
+  font-weight: bold;
+}
+
+.token.inserted {
+  color: #80cbc4;
+}
+
+.token.keyword {
+  color: #c792ea;
+  font-style: italic;
+}
+
+.token.number {
+  color: #fd9170;
+}
+
+.token.operator {
+  color: #89ddff;
+}
+
+.token.prolog {
+  color: #546e7a;
+}
+
+.token.property {
+  color: #80cbc4;
+}
+
+.token.pseudo-class {
+  color: #c3e88d;
+}
+
+.token.pseudo-element {
+  color: #c3e88d;
+}
+
+.token.punctuation {
+  color: #89ddff;
+}
+
+.token.regex {
+  color: #f2ff00;
+}
+
+.token.selector {
+  color: #f07178;
+}
+
+.token.string {
+  color: #c3e88d;
+}
+
+.token.symbol {
+  color: #c792ea;
+}
+
+.token.tag {
+  color: #f07178;
+}
+
+.token.unit {
+  color: #f07178;
+}
+
+.token.url {
+  color: #fd9170;
+}
+
+.token.variable {
+  color: #f07178;
+}
+
+/* Line highlight plugin */
+.line-highlight.line-highlight {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.line-highlight.line-highlight:before,
+.line-highlight.line-highlight[data-end]:after {
+  top: 0.3em;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* for line numbers */
+/* span instead of span:before for a two-toned border */
+.line-numbers .line-numbers-rows > span {
+  border-right: 3px #d9d336 solid;
+}
+
+.mdx p {
+  letter-spacing: 0.6px;
+  line-height: 24px;
+}
+
+.mdx blockquote p:first-of-type::before,
+.mdx blockquote p:last-of-type::after {
+  content: '';
+}
+
+.mdx h2 {
+  @apply font-bold dark:text-[#f5f5f5];
+}
+
+.mdx ul:not(.contains-task-list) {
+  @apply list-disc ml-5 my-2;
+}
+
+.mdx h3 {
+  @apply font-bold dark:text-[#f5f5f5];
+}
+
+pre {
+  overflow-x: auto;
+}
+
+/**
+ * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
+ * 1. Make the element just wide enough to fit its content.
+ * 2. Always fill the visible space in .code-highlight.
+ */
+.code-highlight {
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+.code-line {
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-left-width: 4px;
+  border-left-color: rgba(31, 41, 55, 0); /* Set code block color */
+}
+
+.code-line.inserted {
+  background-color: rgba(16, 185, 129, 0.2); /* Set inserted line (+) color */
+}
+
+.code-line.deleted {
+  background-color: rgba(239, 68, 68, 0.2); /* Set deleted line (-) color */
+}
+
+.highlight-line {
+  margin-left: -16px;
+  margin-right: -16px;
+  background-color: rgba(55, 65, 81, 0.5); /* Set highlight bg color */
+  border-left-width: 4px;
+  border-left-color: rgb(59, 130, 246); /* Set highlight accent border color */
+}
+
+.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 16px;
+  margin-left: -8px;
+  color: rgb(156, 163, 175); /* Line number color */
+  content: attr(line);
 }

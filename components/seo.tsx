@@ -1,5 +1,9 @@
 import Head from 'next/head';
 
+type SeoProps = {
+  title?: string;
+};
+
 const defaultMeta = {
   title: 'Dava Hamka',
   description:
@@ -11,14 +15,14 @@ const defaultMeta = {
   image: '',
 };
 
-const Seo = () => {
+const Seo = ({ title }: SeoProps) => {
   const meta = {
     ...defaultMeta,
   };
 
   return (
     <Head>
-      <title>{meta.title}</title>
+      <title>{title ? `${title} - ${meta.title}` : meta.title}</title>
       <meta content={meta.description} name='description' />
       <meta name='robots' content={meta.robots} />
       {/* openGraph */}

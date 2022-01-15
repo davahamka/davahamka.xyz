@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import FeaturedCard from './featured-card';
 
 const FeaturedProject = () => {

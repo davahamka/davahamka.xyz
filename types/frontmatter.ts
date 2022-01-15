@@ -11,13 +11,14 @@ export type BaseFrontmatter = {
 export type BlogFrontmatter = {
 } & BaseFrontmatter
 
+
 export type BlogType = {
     code: string
     frontmatter: BlogFrontmatter
 }
 
 export type ProjectFrontmatter = {
-
+    stack: string
 } & BaseFrontmatter
 
 export type ProjectType = {

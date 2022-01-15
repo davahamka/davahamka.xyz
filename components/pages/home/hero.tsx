@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import clsx from 'clsx';
+
 import HeroBlurDark from '~/components/svg/hero-blur-dark';
 import useLoaded from '~/hooks/use-loaded';
 import useWindowSize from '~/hooks/use-window-size';

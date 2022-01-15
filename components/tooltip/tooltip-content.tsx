@@ -23,7 +23,10 @@ const TooltipContent = ({ type }: TooltipContentProps) => {
           Follow me on <span className={colorLink}>twitter</span>
         </p>
       ) : (
-        ''
+        <p>
+          Get in touch! <br />
+          <span className={colorLink}>davahamka512@gmail.com</span>
+        </p>
       )}
     </div>
   );

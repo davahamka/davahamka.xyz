@@ -1,9 +1,59 @@
 ---
-title: Next Themes + TailwindCSS for Easy Dark Mode
-description: Nowaday TailwindCSS
-publishedAt: 2022-01-03
+title: Next Themes + Tailwind for Easy Dark Mode
+description: Dark mode is something that modern web users expect. They don't know that making dark mode is quite time consuming, they just say we need dark mode! As developers we realize that dark mode is indeed a good thing to implement.
+publishedAt: '2022-12-31'
 ---
 
-# Hello
+When we talk about web design trends last year, dark mode is one thing that shouldn't be left behind to discuss. Searches for <i>dark mode</i> on Google have started to show an increase since 2019. This is because many companies or industries in technology such as Google, Facebook, Instagram and Apple have started implementing designs with dark themes.
 
-Here's a **neat** demo:
+## Introduction
+
+This article will explain how to implement dark mode using TailwindCSS on the NextJS site. Before we continue, there are things that must be understood first. That is the basics of TailwindCSS and NextJS. No need for advanced things.
+
+In this experiment you will use :
+
+- <b>Next.JS</b>: The React Meta framework
+- <b>TailwindCSS</b>: A utility-first CSS framework
+- <b>next-themes</b>: An abstraction for themes in your Next.js app.
+
+## Getting Started
+
+If you don't have a Next.js + TailwindCSS site to work from, You can follow this and open documentation about instalation TailwindCSS and Next.JS.
+
+After this point we need to update some configuration files.
+
+### Create Next App
+
+First of all we need to create Next.JS app. To create new Next.JS app you can use `create-next-app`, and it will setup everything automatically for you. You can run `npx create-next-app@latest`.
+
+```ts
+// pages/_app.js
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
+```
+
+### Tailwind.config.js
+
+After installing TailwindCSS, you can find the `tailwind.config.js` inside root directory. This config is almost as basic as it can be. The config has a `content` property that used to check and configure paths to all of your HTML templates, JavaScript components, and any other source files that contain Tailwind class names.
+
+## Enabling Dark Mode
+
+Enabling dark mode in TailwindCSS (toggling dark mode manually) is easy. You can add `class` value
+
+## Creating a theme with next-themes
+
+## Toggling
+
+### Change Theme Color Util
+
+## Summary
+
+To set up dark mode in TailwindCSS and Next.JS it requires some configuration and basic state management. In this article is just a start, and many more things that can be explored to make our website look better.
+
+Here's the end state of the project you've been working on in this article on Github
+as well.
+If you've got any questions, please ask them on [Twitter](http://twiter.com/dava770)!
