@@ -6,6 +6,7 @@ import TagProject from './tag-project';
 type ItemProjectProps = {
   data: {
     stack: string;
+    thumbnail: string;
   } & BaseFrontmatter &
     AdditionalResult;
 };
@@ -14,15 +15,17 @@ const ItemProject = ({ data }: ItemProjectProps) => {
   const stacks = useMemo(() => data.stack.split(','), []);
 
   return (
-    <div className='min-h-[320px] cursor-pointer flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#525252]'>
-      <div className='p-2 flex items-end bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-full h-[60%] rounded-t relative'>
+    <div className='min-h-[340px] pb-2 cursor-pointer flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#525252]'>
+      <div className='relative flex items-end  w-full xl:h-[60%] rounded-t'>
         <Image
-          src='/assets/project/web-mockup.png'
-          alt='xx'
-          layout='fill'
-          className='rounded-t'
+          src={`/assets/project/${data.thumbnail}`}
+          alt={data.title}
+          width='540px'
+          height='202px'
+          layout='intrinsic'
+          className='rounded-t-lg h-full w-full z-[-1] top-0'
         />
-        <div className='flex flex-wrap z-[2]'>
+        <div className='flex flex-wrap z-[2] absolute p-2'>
           {stacks.map((item) => (
             <TagProject key={item} label={item} />
           ))}

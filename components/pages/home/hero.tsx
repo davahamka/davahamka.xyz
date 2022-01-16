@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import clsx from 'clsx';
+import Image from 'next/image';
 
 import HeroBlurDark from '~/components/svg/hero-blur-dark';
 import useLoaded from '~/hooks/use-loaded';
@@ -22,11 +23,20 @@ const Hero = () => {
             </div>
             <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
               <div className='text-[100px] bg-[#FECACA] dark:bg-[#050505] w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] rounded-full'>
-                <p className='flex justify-center items-center h-full '>🍣</p>
+                <p className='flex justify-center items-center h-full '>
+                  <Image
+                    src='/assets/hero-logo.png'
+                    alt='hero-logo'
+                    width='94px'
+                    height='94px'
+                  />
+                </p>
               </div>
             </div>
             <div className='absolute top-[64%] left-[62%]'>
-              <div className='bg-[#FF00AF] dark:bg-[#590046] w-[52px] h-[52px] rounded-full'></div>
+              <div className='bg-[#FF00AF] dark:bg-[#590046] w-[52px] h-[52px] rounded-full items-center flex justify-center cur'>
+                @
+              </div>
             </div>
           </div>
           <div className='text-center'>

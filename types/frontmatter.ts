@@ -19,6 +19,7 @@ export type BlogType = {
 
 export type ProjectFrontmatter = {
     stack: string
+    thumbnail: string
 } & BaseFrontmatter
 
 export type ProjectType = {

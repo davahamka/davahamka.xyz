@@ -9,6 +9,7 @@ const About = () => {
   return (
     <>
       <Seo title='About' />
+      
       <section className={clsx(isLoaded && 'fade-in-start')}>
         <div className='px-8 xl:px-0 min-h-[100vh] pt-[80px] xl:w-[68rem] mx-auto'>
           <div className='mt-20'>

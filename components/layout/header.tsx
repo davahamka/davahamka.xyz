@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import DarkToggle from '../svg/dark-toggle';
 import LightToggle from '../svg/light-toggle';
 import { changeThemeColor } from '~/utils/change-theme-color';
+import Logo from '../svg/logo';
+import Link from 'next/link';
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -17,19 +19,30 @@ const Header = () => {
     <header className={clsx('fixed w-full backdrop-blur-sm z-20')}>
       <div className='xl:w-[68rem] h-[80px] mx-auto px-8 xl:px-0'>
         <nav className={clsx('flex justify-between items-center h-full py-4 ')}>
-          <div>{theme}</div>
+          <div>
+            <Link href='/' passHref>
+              <a className='cursor-pointer'>
+                <Logo />
+              </a>
+            </Link>
+          </div>
 
-          <ul className='hidden sm:flex space-x-12'>
+          <ul className='flex space-x-4 text-sm sm:text-base sm:space-x-12'>
             {links.map((item) => (
-              <li
-                key={item.label}
-                className={clsx(
-                  'duration-150 dark:text-[#494949] text-[#525252] ease-out cursor-pointer dark:hover:text-white',
-                  { 'dark:text-white text-[#262626]': pathNow === item.value }
-                )}
-                onClick={() => router.push(item.href)}
-              >
-                {item.label}
+              <li key={item.label}>
+                <Link href={item.href} passHref>
+                  <a
+                    className={clsx(
+                      'duration-150 dark:text-[#494949] text-[#525252] ease-out cursor-pointer dark:hover:text-white',
+                      {
+                        'dark:text-white text-[#262626] font-bold':
+                          pathNow === item.value,
+                      }
+                    )}
+                  >
+                    {item.label}
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>

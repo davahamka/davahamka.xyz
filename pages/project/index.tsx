@@ -31,7 +31,7 @@ const Project = ({
       <Seo title='Project' />
       <section className={clsx(loaded && 'fade-in-start')}>
         <div className='min-h-[100vh] pt-[80px] xl:w-[68rem] mx-auto'>
-          <div className='mt-16'>
+          <div className='px-8 xl:px-0 mt-16'>
             <h1 className='text-4xl font-bold py-2' data-fade='1'>
               Project
             </h1>
@@ -40,6 +40,7 @@ const Project = ({
               sortedProject={
                 sortedProject as ({
                   stack: string;
+                  thumbnail: string;
                 } & BaseFrontmatter &
                   AdditionalResult)[]
               }

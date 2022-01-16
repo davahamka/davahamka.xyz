@@ -16,7 +16,7 @@ const ItemBlog = ({ data }: ItemBlogProps) => {
   return (
     <li>
       <div>
-        <p className='text-light text-[#D7D7D7] text-sm'>
+        <p className='text-light dark:text-[#D7D7D7] text-sm'>
           {dayjs(data.publishedAt).format('MMMM DD, YY')} •{' '}
           {data.readingTime.minutes} mins reading time
         </p>
@@ -25,7 +25,9 @@ const ItemBlog = ({ data }: ItemBlogProps) => {
             {data.title}
           </h3>
         </Link>
-        <p className='leading-relaxed text-[#ACACAC]'>{data.description}</p>
+        <p className='leading-relaxed dark:text-[#ACACAC]'>
+          {data.description}
+        </p>
       </div>
       <div className='mt-8 flex flex-row-reverse'>
         <Link href={`blog/${data.slug}`} passHref>

@@ -67,12 +67,29 @@ export async function getAllPost(type: ContentType) {
         }
 
 
-        console.log(res)
-
         return res;
     })
 }
 
-export async function getFeatured() {
+export async function getFeatured(type: ContentType) {
+    const files = getPostSlugs(type)
+    const featuredContent = []
+
+    for (let i = 0; i < 3; i++) {
+        const source = readFileSync(join(process.cwd(), "contents", type, files[i]), "utf-8")
+
+        const { data } = matter(source)
+
+        const res: ResultFrontmatter<typeof type> =
+        {
+            ...(data as ChooseFrontmatter<typeof type>),
+            slug: files[i].replace(".mdx", ""),
+            readingTime: readingTime(source)
+        }
+
+        featuredContent.push(res)
+    }
+
+    return featuredContent
 
 }
