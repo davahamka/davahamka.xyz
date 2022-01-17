@@ -1,4 +1,5 @@
 import { getTechStacks } from 'lib/graphcms';
+import { getFeatured } from 'lib/mdx';
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import FeaturedProject from '~/components/pages/home/featured-project';
 import Seo from '~/components/seo';
@@ -8,21 +9,25 @@ import TechStack from '../components/pages/home/tech-stack';
 
 export const getStaticProps = async () => {
   const dataTechStacks = await getTechStacks();
+  const dataFeatured = await getFeatured('project');
+
   return {
     props: {
       dataTechStacks,
+      dataFeatured,
     },
   };
 };
 
 const Home = ({
   dataTechStacks,
+  dataFeatured,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Seo />
       <Hero />
-      <FeaturedProject />
+      <FeaturedProject dataFeatured={dataFeatured} />
       <TechStack dataTechStacks={dataTechStacks} />
     </>
   );

@@ -19,7 +19,7 @@ const Header = () => {
     <header className={clsx('fixed w-full backdrop-blur-sm z-20')}>
       <div className='xl:w-[68rem] h-[80px] mx-auto px-8 xl:px-0'>
         <nav className={clsx('flex justify-between items-center h-full py-4 ')}>
-          <div>
+          <div className='hidden sm:block'>
             <Link href='/' passHref>
               <a className='cursor-pointer'>
                 <Logo />
@@ -27,7 +27,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <ul className='flex space-x-4 text-sm sm:text-base sm:space-x-12'>
+          <ul className='flex space-x-4 sm:space-x-12'>
             {links.map((item) => (
               <li key={item.label}>
                 <Link href={item.href} passHref>

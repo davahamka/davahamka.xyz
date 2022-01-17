@@ -15,7 +15,7 @@ const ItemProject = ({ data }: ItemProjectProps) => {
   const stacks = useMemo(() => data.stack.split(','), []);
 
   return (
-    <div className='min-h-[340px] pb-2 cursor-pointer flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#525252]'>
+    <div className='sm:min-h-[340px] pb-6 sm:pb-2 cursor-pointer flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#525252]'>
       <div className='relative flex items-end  w-full xl:h-[60%] rounded-t'>
         <Image
           src={`/assets/project/${data.thumbnail}`}
@@ -31,7 +31,7 @@ const ItemProject = ({ data }: ItemProjectProps) => {
           ))}
         </div>
       </div>
-      <div className='px-3 py-1'>
+      <div className='px-4 py-1'>
         <p className='text-2xl my-2 font-bold'>{data.title}</p>
         <p className='text-sm'>{data.description}</p>
       </div>

@@ -4,11 +4,9 @@ import Image from 'next/image';
 
 import HeroBlurDark from '~/components/svg/hero-blur-dark';
 import useLoaded from '~/hooks/use-loaded';
-import useWindowSize from '~/hooks/use-window-size';
 
 const Hero = () => {
   const isLoaded = useLoaded();
-  const size = useWindowSize();
 
   return (
     <section className={clsx(isLoaded && 'fade-in-start')}>
@@ -23,7 +21,7 @@ const Hero = () => {
             </div>
             <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
               <div className='text-[100px] bg-[#FECACA] dark:bg-[#050505] w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] rounded-full'>
-                <p className='flex justify-center items-center h-full '>
+                <p className='flex justify-center items-center h-full'>
                   <Image
                     src='/assets/hero-logo.png'
                     alt='hero-logo'
@@ -33,9 +31,14 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-            <div className='absolute top-[64%] left-[62%]'>
-              <div className='bg-[#FF00AF] dark:bg-[#590046] w-[52px] h-[52px] rounded-full items-center flex justify-center cur'>
-                @
+            <div className='absolute top-[70%] left-[64%] sm:top-[64%] sm:left-[62%]'>
+              <div className='bg-[#FF00AF] dark:bg-[#590046] w-[52px] h-[52px] rounded-full items-center flex justify-center cursor-pointer'>
+                <Image
+                  src='/assets/message-emoji.png'
+                  alt='message-emoji'
+                  width='24px'
+                  height='24px'
+                />
               </div>
             </div>
           </div>

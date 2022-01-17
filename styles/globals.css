@@ -114,7 +114,7 @@ html {
 }
 
 .mdx {
-  @apply dark:text-[#acacac];
+  @apply dark:text-[#acacac] overflow-auto;
 }
 
 .mdx blockquote {
@@ -128,7 +128,7 @@ html {
 }
 
 pre[class*='language-'] {
-  @apply border-2 dark:border-[#383838];
+  @apply border-2 dark:border-[#383838]  sm:w-full;
 }
 
 code[class*='language-'],

@@ -1,12 +1,18 @@
 import clsx from 'clsx';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { AdditionalResult, BaseFrontmatter } from '~/types/frontmatter';
 
 type CardProps = {
   position?: 'left' | 'center' | 'right';
+  data: BaseFrontmatter & AdditionalResult;
 };
 
-const FeaturedCard = ({ position = 'left' }: CardProps) => {
+const FeaturedCard = ({ position = 'left', data }: CardProps) => {
+  const router = useRouter();
   return (
     <div
+      onClick={() => router.push('/project')}
       className={clsx(
         'cursor-pointer duration-200 hover:scale-[1.03] h-full rounded-lg  p-[6px] bg-gradient-to-r ',
         { 'from-[#eec1ff] to-[#3A41A4]': position === 'left' },
@@ -15,13 +21,11 @@ const FeaturedCard = ({ position = 'left' }: CardProps) => {
       )}
     >
       <div className='py-4 px-6 bg-[#f5f5f5] dark:bg-brand-black h-full rounded-lg flex flex-col justify-between'>
-        <div>
-          Create internal system and collaborated with team to redesign product
-          service.
-        </div>
+        <div>{data.description}</div>
         <div className='flex justify-between'>
-          <a className='font-bold'>Read more</a>
-          <p>→</p>
+          <Link href='/project' passHref>
+            <a className='font-bold'>Read more</a>
+          </Link>
         </div>
       </div>
     </div>
