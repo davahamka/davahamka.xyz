@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import clsx from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import HeroBlurDark from '~/components/svg/hero-blur-dark';
 import useLoaded from '~/hooks/use-loaded';
@@ -33,12 +34,14 @@ const Hero = () => {
             </div>
             <div className='absolute top-[70%] left-[64%] sm:top-[64%] sm:left-[62%]'>
               <div className='bg-[#FF00AF] dark:bg-[#590046] w-[52px] h-[52px] rounded-full items-center flex justify-center cursor-pointer'>
-                <Image
-                  src='/assets/message-emoji.png'
-                  alt='message-emoji'
-                  width='24px'
-                  height='24px'
-                />
+                <Link href='mailto:davahamka512@gmail.com' passHref>
+                  <Image
+                    src='/assets/message-emoji.png'
+                    alt='message-emoji'
+                    width='24px'
+                    height='24px'
+                  />
+                </Link>
               </div>
             </div>
           </div>

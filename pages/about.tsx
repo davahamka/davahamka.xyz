@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import clsx from 'clsx';
+import Image from 'next/image';
 import Seo from '~/components/seo';
 import useLoaded from '~/hooks/use-loaded';
 
@@ -9,7 +10,7 @@ const About = () => {
   return (
     <>
       <Seo title='About' />
-      
+
       <section className={clsx(isLoaded && 'fade-in-start')}>
         <div className='px-8 xl:px-0 min-h-[100vh] pt-[80px] xl:w-[68rem] mx-auto'>
           <div className='mt-20'>
@@ -23,16 +24,21 @@ const About = () => {
               Dava Hamka
             </h1>
           </div>
-          <div className='flex flex-col md:flex-row-reverse items-center  mt-6 space-y-12 space-x-4'>
+          <div className='flex flex-col lg:flex-row-reverse items-center  mt-6 space-y-12 lg:space-y-0 space-x-4'>
             <div className='w-1/2 flex justify-center text-center mx-2'>
-              <img
-                src='assets/dava-v1.jpg'
+              <Image
+                src='/assets/dava-v1.jpg'
                 alt=''
+                width='300px'
+                height='400px'
                 className='rounded text-center lg:w-[100%]'
                 data-fade='3'
               />
             </div>
-            <div className='text-lg flex flex-col space-y-4' data-fade='3'>
+            <div
+              className='text-lg flex flex-col space-y-4 -mt-10'
+              data-fade='3'
+            >
               <div className='flex'>
                 <div className='min-w-[24px]'>→</div>
                 <p className=''>Hello! my name Dava Mohammad Hamka.</p>
@@ -57,8 +63,7 @@ const About = () => {
                 <p className='max-[490px]'>
                   I’m playing video games with my friends, drooling over game
                   accessories and keyboards, watch anime and love sci-fi genre,
-                  appreciating (more like inhaling) a bag of Gifflar, and going
-                  out to see incredible view of nature.
+                  and go out to see incredible view of nature.
                 </p>
               </div>
               <div className='flex'>

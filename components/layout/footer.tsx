@@ -41,7 +41,7 @@ const linkSocial = [
   },
   {
     name: 'email',
-    link: 'mailto:davahamka512ß@gmail.com?subject = Feedback&body = Message',
+    link: 'mailto:davahamka512@gmail.com',
     logo: <AiOutlineMail />,
   },
   {

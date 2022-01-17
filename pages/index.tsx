@@ -16,6 +16,7 @@ export const getStaticProps = async () => {
       dataTechStacks,
       dataFeatured,
     },
+    revalidate: 60,
   };
 };
 
