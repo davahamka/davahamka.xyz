@@ -9,15 +9,22 @@ import rehypePrism from 'rehype-prism-plus';
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+/**
+ * Get all mdx files in content directory
+ * @param type request blog/project
+ * @returns {string[]}
+ */
+
 export function getPostSlugs(type: ContentType) {
     return readdirSync(join(process.cwd(), 'contents', type))
 }
 
 /**
- *
- * @param type
+ * Retrieve code and frontmatter data from mdx file 
+ * to appear on the page
+ * @param type request blog/project
  * @param slug
- * @returns
+ * @returns {Promise<CodeFrontmatterResult>}
  */
 export async function getPostBySlug(type: ContentType = 'blog', slug: string): Promise<CodeFrontmatterResult> {
     // get mdx file from contents folder
@@ -46,9 +53,9 @@ export async function getPostBySlug(type: ContentType = 'blog', slug: string): P
 }
 
 /**
- * 
- * @param type 
- * @returns 
+ * Retrieve all frontmatter from mdx files
+ * @param type request blog/project
+ * @returns {BaseFrontmatter & AdditionalResult[]}
  */
 export async function getAllPost(type: ContentType) {
     const files = getPostSlugs(type)
@@ -71,6 +78,11 @@ export async function getAllPost(type: ContentType) {
     })
 }
 
+/**
+ * Retrieve frontmatter featured content (3) 
+ * @param type request blog/project
+ * @returns {(BaseFrontmatter & AdditionalResult)[]}
+ */
 export async function getFeatured(type: ContentType) {
     const files = getPostSlugs(type)
     const featuredContent = []
