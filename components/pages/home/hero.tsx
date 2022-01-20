@@ -53,7 +53,7 @@ const Hero = () => {
               data-fade='3'
               className='text-4xl lg:text-[4.5rem] py-6 text-transparent mb-4 font-extrabold bg-gradient-to-br bg-clip-text from-[#FF00AF] to-[#FF55C9]'
             >
-              @davahamka
+              Dava Hamka
             </h1>
           </div>
           <div>
