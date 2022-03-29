@@ -46,7 +46,7 @@ const linkSocial = [
   },
   {
     name: 'linkedin',
-    link: 'https://github.com/davahamka',
+    link: 'https://www.linkedin.com/in/davahamka/',
     logo: <AiFillLinkedin />,
   },
   {
